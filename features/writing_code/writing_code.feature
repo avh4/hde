@@ -12,6 +12,7 @@ Scenario: Java Hello World
     System.out.println("Hello, World");
     """
   Then the project should have no errors
+  And the project should have no warnings
   And running the project should produce:
     """
     Hello, World

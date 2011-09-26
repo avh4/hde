@@ -1,0 +1,2 @@
+---
+default: --format html --out target/cucumber/cucumber.html --format progress --no-snippets

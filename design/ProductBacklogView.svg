@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="400"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="ProductBacklogView.svg">
+  <defs
+     id="defs2987">
+    <linearGradient
+       id="linearGradient3801">
+      <stop
+         style="stop-color:#fcfcfc;stop-opacity:1;"
+         offset="0"
+         id="stop3803" />
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1;"
+         offset="1"
+         id="stop3805" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3785">
+      <stop
+         style="stop-color:#e7e7e7;stop-opacity:1;"
+         offset="0"
+         id="stop3787" />
+      <stop
+         style="stop-color:#cccccc;stop-opacity:0;"
+         offset="1"
+         id="stop3789" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3801"
+       id="linearGradient3807"
+       x1="44.5"
+       y1="1010.8622"
+       x2="44.5"
+       y2="1045.3622"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3801"
+       id="linearGradient3814"
+       gradientUnits="userSpaceOnUse"
+       x1="44.5"
+       y1="1010.8622"
+       x2="44.5"
+       y2="1045.3622" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3801"
+       id="linearGradient3862"
+       gradientUnits="userSpaceOnUse"
+       x1="44.5"
+       y1="1010.8622"
+       x2="44.5"
+       y2="1045.3622"
+       gradientTransform="translate(7.105469,-12.105472)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="148.87948"
+     inkscape:cy="274.36897"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1263"
+     inkscape:window-height="788"
+     inkscape:window-x="386"
+     inkscape:window-y="93"
+     inkscape:window-maximized="0"
+     showguides="false">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,400"
+       id="guide3816" />
+    <sodipodi:guide
+       position="400,0"
+       orientation="-400,0"
+       id="guide3818" />
+    <sodipodi:guide
+       position="400,400"
+       orientation="0,-400"
+       id="guide3820" />
+    <sodipodi:guide
+       position="0,400"
+       orientation="400,0"
+       id="guide3822" />
+    <sodipodi:guide
+       position="34.105469,352.58789"
+       orientation="-16.541016,0"
+       id="guide3836" />
+    <sodipodi:guide
+       position="34.105469,369.1289"
+       orientation="0,63.457031"
+       id="guide3838" />
+    <sodipodi:guide
+       position="97.5625,369.1289"
+       orientation="16.541016,0"
+       id="guide3840" />
+    <sodipodi:guide
+       position="97.5625,352.58789"
+       orientation="0,-63.457031"
+       id="guide3842" />
+    <sodipodi:guide
+       position="0,34.105469"
+       orientation="34.105469,0"
+       id="guide3846" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,34.105469"
+       id="guide3848" />
+    <sodipodi:guide
+       position="34.105469,0"
+       orientation="-34.105469,0"
+       id="guide3850" />
+    <sodipodi:guide
+       position="34.105469,34.105469"
+       orientation="0,-34.105469"
+       id="guide3852" />
+    <sodipodi:guide
+       position="89.266602,255.21386"
+       orientation="-10.834961,0"
+       id="guide3896" />
+    <sodipodi:guide
+       position="89.266602,266.04883"
+       orientation="0,97.015625"
+       id="guide3898" />
+    <sodipodi:guide
+       position="186.28223,266.04883"
+       orientation="10.834961,0"
+       id="guide3900" />
+    <sodipodi:guide
+       position="186.28223,255.21386"
+       orientation="0,-97.015625"
+       id="guide3902" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-652.36218)">
+    <rect
+       id="rect2994"
+       width="400"
+       height="400"
+       x="0"
+       y="652.36218"
+       style="fill:#cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville Semi-Bold Italic"
+       x="34"
+       y="695.36218"
+       id="text3058"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3060"
+         x="34"
+         y="695.36218">Backlog</tspan></text>
+    <rect
+       ry="4.5"
+       y="782.36218"
+       x="49"
+       height="20"
+       width="300"
+       id="rect3854"
+       style="fill:#fcfcfc;fill-opacity:1;stroke:#c0c0c0;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       style="fill:#04aafe;fill-opacity:1;stroke:none"
+       d="m 87.28125,786.29968 c 0.728429,5.55282 -3.043046,15.60555 6,12.84375 31.66667,0 63.33333,0 95,0 -1.46497,-4.81628 3.60489,-16.16739 -4,-14.84375 -32.33333,0 -64.66667,0 -97,0 l 0,1 0,1 z"
+       id="rect3904"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="88.890625"
+       y="726.95007"
+       id="text3062"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3064"
+         x="88.890625"
+         y="726.95007"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Adding numbers</tspan><tspan
+         sodipodi:role="line"
+         x="88.890625"
+         y="744.45007"
+         id="tspan3066"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Calculating a percentage</tspan><tspan
+         sodipodi:role="line"
+         x="88.890625"
+         y="761.95007"
+         id="tspan3068"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Subtracting numbers</tspan><tspan
+         sodipodi:role="line"
+         x="88.890625"
+         y="779.45007"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
+         id="tspan3856">Negating a number</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3072"
+       y="726.95007"
+       x="62.890625"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan3082">2</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3084">2</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3086">2</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3088">2</tspan></text>
+    <rect
+       style="fill:url(#linearGradient3862);fill-opacity:1;stroke:#c0c0c0;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3795"
+       width="37"
+       height="37"
+       x="34.105469"
+       y="997.25671"
+       ry="4.5" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5b5b5b;fill-opacity:1;stroke:none;font-family:Sans"
+       x="35.847656"
+       y="1028.2958"
+       id="text3797"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3799"
+         x="35.847656"
+         y="1028.2958">+</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3864"
+       y="796.95007"
+       x="88.890625"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#818181;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan3874"
+         style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans Italic;fill:#818181;fill-opacity:1;stroke:none;stroke-opacity:1"
+         y="796.95007"
+         x="88.890625"
+         sodipodi:role="line">New feature...</tspan></text>
+  </g>
+</svg>
