@@ -1,91 +1,65 @@
 package net.avh4.ide;
 
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.io.File;
 
-import net.avh4.gui.View;
-import net.avh4.gui.swing.SwingViewFrame;
+import net.avh4.framework.uilayer.SceneCreator;
+import net.avh4.framework.uilayer.UI;
+import net.avh4.framework.uilayer.UILayer;
+import net.avh4.framework.uilayer.scene.Scene;
 import net.avh4.system.datastore.DataStore;
+import net.avh4.system.datastore.DataStoreException;
 import net.avh4.system.datastore.FileDataStore;
 
-public class IDE implements View {
+public class IDE implements UI {
 
-	private static final long serialVersionUID = 1L;
+	private final DataStore dataStore;
 
-	public static void main(final String[] args) {
-		final IDE ide = new IDE(new FileDataStore("."));
-		final SwingViewFrame window = new SwingViewFrame(ide);
-		window.setVisible(true);
+	public IDE(final File root) {
+		this(new FileDataStore(root));
 	}
-
-	private final Project project;
-	private final ProductBacklogView productBacklogView;
 
 	public IDE(final DataStore dataStore) {
-		project = new Project("New Project", dataStore);
-		productBacklogView = new ProductBacklogView(project.getProductBacklog());
-	}
-
-	public void userCommand(final String command, final String text) {
-	}
-
-	public void enterText(final String text) {
-	}
-
-	public Collection<BuildError> getErrors() {
-		return new ArrayList<BuildError>();
-	}
-
-	public Collection<BuildWarning> getWarnings() {
-		return new ArrayList<BuildWarning>();
-	}
-
-	public Project getProject() {
-		return project;
-	}
-
-	public ProductBacklogView getProductBacklogView() {
-		productBacklogView.setSize(productBacklogView.getPreferredSize());
-		return productBacklogView;
-	}
-
-	public ExecutionResults runProject() {
-		return new ExecutionResults();
+		this.dataStore = dataStore;
+		try {
+			dataStore.writeData("src/features/stories/features.story",
+					"Story: Features");
+		} catch (final DataStoreException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
-	public void type(final char c) {
-		productBacklogView.type(c);
-	}
-
-	@Override
-	public Rectangle findClickRegion(final String label, final int index) {
-		return productBacklogView.findClickRegion(label, index);
+	public Scene getScene() {
+		final Scene scene = UILayer.newScene("IDE");
+		scene.addPlaceholder("New Story", 0, 0, 100, 25);
+		scene.addPlaceholder("New Scenario", 100, 0, 100, 25);
+		scene.addPlaceholder("Run Integration Tests", 200, 0, 100, 25);
+		return scene;
 	}
 
 	@Override
 	public void click(final int x, final int y) {
-		productBacklogView.click(x, y);
-	}
-
-	@Override
-	public Dimension getPreferredSize() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setSize(final Dimension size) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void paint(final Graphics2D g) {
+	public void key(final int keyCode) {
 		// TODO Auto-generated method stub
 
 	}
+
+	public Feature getSelectedFeature() {
+		return new Feature();
+	}
+
+	public void type(final String string) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public SceneCreator getTestResultsView() {
+		return new TestResultsView();
+	}
+
 }
