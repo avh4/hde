@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPEN="java -jar $HOME/.m2/repository/net/avh4/util/imagediff/0.0.4-SNAPSHOT/imagediff-0.0.4-SNAPSHOT.jar"
+OPEN="java -jar $HOME/.m2/repository/net/avh4/util/imagediff/0.0.6/imagediff-0.0.6.jar"
 
 for actual in "$@"; do
 	expected="`find src -name "$actual"`"
