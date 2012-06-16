@@ -13,8 +13,6 @@ import java.io.File;
 
 public class IDE implements UI {
 
-    private final DataStore dataStore;
-
     public static void main(String[] args) {
         UILayer.main(new IDE(new File(".")));
     }
@@ -24,9 +22,8 @@ public class IDE implements UI {
     }
 
     public IDE(final DataStore dataStore) {
-        this.dataStore = dataStore;
         try {
-            dataStore.writeData("src/features/stories/features.story",
+            dataStore.writeData("src/features/stories/features.feature",
                     "Story: Features");
         } catch (final DataStoreException e) {
             e.printStackTrace();

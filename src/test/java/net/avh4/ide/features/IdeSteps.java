@@ -1,12 +1,12 @@
-package net.avh4.ide;
+package net.avh4.ide.features;
 
+import cucumber.annotation.en.Given;
+import cucumber.annotation.en.Then;
+import cucumber.annotation.en.When;
+import net.avh4.ide.IDE;
 import net.avh4.sandbox.Sandbox;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
-import org.jbehave.core.annotations.Given;
-import org.jbehave.core.annotations.Then;
-import org.jbehave.core.annotations.When;
-import org.jbehave.core.steps.Steps;
 
 import java.io.IOException;
 
@@ -14,7 +14,8 @@ import static net.avh4.util.imagecomparison.Matchers.looksLike;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class IdeSteps extends Steps {
+@SuppressWarnings("UnusedDeclaration")
+public class IdeSteps {
 
     private IDE ide;
     private Sandbox sandbox;
@@ -66,5 +67,4 @@ public class IdeSteps extends Steps {
         final String actual = FileUtils.readFileToString(sandbox.newFile(file));
         assertThat(actual, is(expected));
     }
-
 }
