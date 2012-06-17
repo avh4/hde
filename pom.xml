@@ -36,7 +36,6 @@
         <configuration>
           <systemPropertyVariables>
             <java.awt.headless>true</java.awt.headless>
-            <swing.aatext>false</swing.aatext>
           </systemPropertyVariables>
         </configuration>
       </plugin>
