@@ -3,7 +3,7 @@ package net.avh4.ide;
 import net.avh4.system.datastore.SandboxDataStore;
 import org.junit.Test;
 
-import static net.avh4.util.imagecomparison.Matchers.isApproved;
+import static net.avh4.util.imagecomparison.hamcrest.ImageComparisonMatchers.isApproved;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class IDETest {

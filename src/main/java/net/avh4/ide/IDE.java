@@ -1,10 +1,14 @@
 package net.avh4.ide;
 
-import net.avh4.framework.uilayer.SceneCreator;
+import net.avh4.framework.uilayer.Element;
+import net.avh4.framework.uilayer.TimerUpdate;
 import net.avh4.framework.uilayer.UI;
 import net.avh4.framework.uilayer.UILayer;
+import net.avh4.framework.uilayer.scene.FontMetricsService;
+import net.avh4.framework.uilayer.scene.GraphicsOperations;
 import net.avh4.framework.uilayer.scene.Scene;
 import net.avh4.framework.uilayer.scene.ScenePlaceholder;
+import net.avh4.math.geometry.Rect;
 import net.avh4.system.datastore.DataStore;
 import net.avh4.system.datastore.DataStoreException;
 import net.avh4.system.datastore.FileDataStore;
@@ -33,20 +37,25 @@ public class IDE implements UI {
     @Override
     public Scene getScene() {
         final Scene scene = new Scene("IDE");
-        scene.add(new ScenePlaceholder("New Story", 0, 0, 100, 25));
-        scene.add(new ScenePlaceholder("New Scenario", 100, 0, 100, 25));
-        scene.add(new ScenePlaceholder("Run Integration Tests", 200, 0, 100, 25));
+        scene.add(Rect.fromTopLeft(0, 0, 100, 25), new ScenePlaceholder("New Story"));
+        scene.add(Rect.fromTopLeft(100, 0, 100, 25), new ScenePlaceholder("New Scenario"));
+        scene.add(Rect.fromTopLeft(200, 0, 100, 25), new ScenePlaceholder("Run Integration Tests"));
         return scene;
     }
 
     @Override
-    public void click(final int x, final int y) {
+    public void draw(Rect rect, GraphicsOperations graphicsOperations, FontMetricsService fontMetricsService) {
+        getScene().draw(rect, graphicsOperations, fontMetricsService);
+    }
+
+    @Override
+    public void click(Rect rect, double v, double v2) {
         // TODO Auto-generated method stub
 
     }
 
     @Override
-    public void key(final int keyCode) {
+    public void key(int i, boolean b) {
         // TODO Auto-generated method stub
 
     }
@@ -60,8 +69,12 @@ public class IDE implements UI {
 
     }
 
-    public SceneCreator getTestResultsView() {
+    public Element getTestResultsView() {
         return new TestResultsView();
     }
 
+    @Override
+    public UpdateAction time() {
+        return UpdateAction.NO_UPDATE;
+    }
 }
