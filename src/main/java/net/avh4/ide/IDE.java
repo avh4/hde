@@ -34,8 +34,7 @@ public class IDE implements UI {
         }
     }
 
-    @Override
-    public Scene getScene() {
+    private Scene getScene() {
         final Scene scene = new Scene("IDE");
         scene.add(Rect.fromTopLeft(0, 0, 100, 25), new ScenePlaceholder("New Story"));
         scene.add(Rect.fromTopLeft(100, 0, 100, 25), new ScenePlaceholder("New Scenario"));
@@ -51,13 +50,11 @@ public class IDE implements UI {
     @Override
     public void click(Rect rect, double v, double v2) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public void key(int i, boolean b) {
         // TODO Auto-generated method stub
-
     }
 
     public Feature getSelectedFeature() {
@@ -66,7 +63,6 @@ public class IDE implements UI {
 
     public void type(final String string) {
         // TODO Auto-generated method stub
-
     }
 
     public Element getTestResultsView() {
