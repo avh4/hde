@@ -11,8 +11,12 @@ public class EditorWindow implements Window {
     }
 
     public String getContents() {
-        return "public class HelloWorldActivity extends Activity {\n" +
+        return "package com.example.Hello_World;\n" +
                 "\n" +
+                "import android.app.Activity;\n" +
+                "import android.os.Bundle;\n" +
+                "\n" +
+                "public class HelloWorldActivity extends Activity {\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
                 "        super.onCreate(savedInstanceState);\n" +
