@@ -51,6 +51,13 @@
   </build>
   <dependencies>
     <dependency>
+      <groupId>com.googlecode.dex2jar</groupId>
+      <artifactId>dex-reader</artifactId>
+      <version>1.15</version>
+      <scope>test</scope>
+      <systemPath>${project.basedir}/lib/dex-reader-1.15.jar</systemPath>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit-dep</artifactId>
       <scope>test</scope>
@@ -110,6 +117,22 @@
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>${guava.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.functionaljava</groupId>
+      <artifactId>functionaljava</artifactId>
+      <version>3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+    <dependency>
+      <groupId>net.avh4.test</groupId>
+      <artifactId>junit-nested</artifactId>
+      <version>0.0.5</version>
+      <scope>test></scope>
     </dependency>
   </dependencies>
 

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.googlecode.dex2jar:dex-reader:1.15">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dex-reader-1.15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/dex2jar/dex-reader/1.15/dex-reader-1.15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/dex2jar/dex-reader/1.15/dex-reader-1.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
