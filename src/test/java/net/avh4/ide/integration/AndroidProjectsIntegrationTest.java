@@ -22,15 +22,16 @@ public class AndroidProjectsIntegrationTest {
     @Parameterized.Parameters(name = "{0}")
     public static Collection<Object[]> data() {
         return ImmutableList.of(
-                new Object[]{"domain", IntegrationTestModules.domainModule()},
-                new Object[]{"ui", IntegrationTestModules.uiModule()}
+                new Object[]{"domain", new IntegrationTestDomainModule()},
+                new Object[]{"ui", new IntegrationTestUiModule()}
         );
     }
 
-    Agent agent;
+    final Agent agent;
 
     public AndroidProjectsIntegrationTest(@SuppressWarnings("UnusedParameters") String name,
-                                          PicoContainer pico) {
+                                          IntegrationTestModule module) {
+        final PicoContainer pico = module.getContainer();
         this.agent = pico.getComponent(Agent.class);
         checkNotNull(this.agent, "The DI container did not provide an Agent");
     }
