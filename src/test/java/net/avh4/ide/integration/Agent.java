@@ -5,6 +5,7 @@ import java.io.IOException;
 public interface Agent {
     void createNewProject(String projectName);
 
+    @Deprecated
     boolean isEditorVisible();
 
     String sourceFileContents(String sourceFileName);
