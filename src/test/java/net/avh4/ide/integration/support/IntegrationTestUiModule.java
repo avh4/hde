@@ -1,7 +1,10 @@
-package net.avh4.ide.integration;
+package net.avh4.ide.integration.support;
 
 import net.avh4.ide.WelcomeWindowView;
 import net.avh4.ide.editing.EditorWindowView;
+import net.avh4.ide.test.support.TestKeyboardInputSource;
+import net.avh4.ide.test.support.TestWindowManager;
+import net.avh4.ide.test.support.TestWindowViewAdapter;
 import org.picocontainer.MutablePicoContainer;
 
 public class IntegrationTestUiModule extends IntegrationTestDomainModule {

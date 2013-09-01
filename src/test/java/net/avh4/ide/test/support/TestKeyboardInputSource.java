@@ -1,4 +1,4 @@
-package net.avh4.ide.integration;
+package net.avh4.ide.test.support;
 
 import net.avh4.ide.KeyboardInputSource;
 

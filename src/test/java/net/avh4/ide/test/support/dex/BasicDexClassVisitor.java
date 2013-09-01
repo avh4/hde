@@ -1,4 +1,4 @@
-package net.avh4.ide.integration.dex;
+package net.avh4.ide.test.support.dex;
 
 import com.googlecode.dex2jar.Field;
 import com.googlecode.dex2jar.Method;

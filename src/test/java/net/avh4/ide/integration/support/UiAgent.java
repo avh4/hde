@@ -1,14 +1,17 @@
-package net.avh4.ide.integration;
+package net.avh4.ide.integration.support;
 
 import net.avh4.ide.*;
 import net.avh4.ide.editing.EditorWindow;
 import net.avh4.ide.platforms.android.AndroidSdk;
+import net.avh4.ide.test.support.TestAndroidSdk;
+import net.avh4.ide.test.support.TestKeyboardInputSource;
+import net.avh4.ide.test.support.TestWindowManager;
 import net.avh4.ide.ui.WindowManager;
 import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
 
-import static net.avh4.ide.integration.TestWindowViewAdapter.TestWindowView;
+import static net.avh4.ide.test.support.TestWindowViewAdapter.TestWindowView;
 import static org.fest.assertions.Assertions.assertThat;
 
 public class UiAgent implements Agent {

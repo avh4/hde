@@ -1,6 +1,10 @@
 package net.avh4.ide.integration;
 
 import com.google.common.collect.ImmutableList;
+import net.avh4.ide.integration.support.Agent;
+import net.avh4.ide.integration.support.IntegrationTestDomainModule;
+import net.avh4.ide.integration.support.IntegrationTestModule;
+import net.avh4.ide.integration.support.IntegrationTestUiModule;
 import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Ignore;

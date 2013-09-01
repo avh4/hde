@@ -1,4 +1,4 @@
-package net.avh4.ide.integration;
+package net.avh4.ide.integration.support;
 
 import java.io.IOException;
 

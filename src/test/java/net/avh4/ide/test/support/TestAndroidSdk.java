@@ -1,11 +1,11 @@
-package net.avh4.ide.integration;
+package net.avh4.ide.test.support;
 
 import com.googlecode.dex2jar.reader.DexFileReader;
 import com.googlecode.dex2jar.visitors.DexClassVisitor;
 import com.googlecode.dex2jar.visitors.DexFileVisitor;
 import fj.data.List;
-import net.avh4.ide.integration.dex.BasicDexClassVisitor;
-import net.avh4.ide.integration.dex.StringConstantCapturingCodeVisitor;
+import net.avh4.ide.test.support.dex.BasicDexClassVisitor;
+import net.avh4.ide.test.support.dex.StringConstantCapturingCodeVisitor;
 import net.avh4.ide.platforms.android.AndroidSdk;
 import net.avh4.util.MultiMap;
 

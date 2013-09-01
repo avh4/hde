@@ -1,4 +1,4 @@
-package net.avh4.ide.integration;
+package net.avh4.ide.integration.support;
 
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
