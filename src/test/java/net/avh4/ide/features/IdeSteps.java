@@ -4,6 +4,7 @@ import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import net.avh4.ide.IDE;
+import net.avh4.math.geometry.Point;
 import net.avh4.math.geometry.Rect;
 import net.avh4.sandbox.Sandbox;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -30,7 +31,7 @@ public class IdeSteps {
 
     @When("I create a new story named \"Features\"")
     public void whenICreateANewStoryNamedFeatures() {
-        ide.click(bounds, 10, 5);
+        ide.click(bounds, Point.at(10, 5));
         type("Features\n");
     }
 
@@ -42,13 +43,13 @@ public class IdeSteps {
     public void whenICreateANewScenario(final String story,
                                         final String scenario) {
         assertThat(ide.getSelectedFeature().getName(), is(story));
-        ide.click(bounds, 110, 5);
+        ide.click(bounds, Point.at(110, 5));
         type(scenario);
     }
 
     @When("I run the integration tests")
     public void whenIRunTheIntegrationTests() {
-        ide.click(bounds, 310, 5);
+        ide.click(bounds, Point.at(310, 5));
     }
 
     @Then("I should see test results\n$what")

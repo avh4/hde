@@ -13,5 +13,4 @@ public class IDETest {
         final IDE subject = new IDE(new SandboxDataStore());
         assertThat(subject, isApproved());
     }
-
 }

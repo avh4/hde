@@ -8,6 +8,7 @@ import net.avh4.framework.uilayer.scene.FontMetricsService;
 import net.avh4.framework.uilayer.scene.GraphicsOperations;
 import net.avh4.framework.uilayer.scene.Scene;
 import net.avh4.framework.uilayer.scene.ScenePlaceholder;
+import net.avh4.math.geometry.Point;
 import net.avh4.math.geometry.Rect;
 import net.avh4.system.datastore.DataStore;
 import net.avh4.system.datastore.DataStoreException;
@@ -48,13 +49,15 @@ public class IDE implements UI {
     }
 
     @Override
-    public void click(Rect rect, double v, double v2) {
-        // TODO Auto-generated method stub
+    public void click(Rect bounds, Point p) {
+    }
+
+    @Override
+    public void move(Rect bounds, Point p) {
     }
 
     @Override
     public void key(int i, boolean b) {
-        // TODO Auto-generated method stub
     }
 
     public Feature getSelectedFeature() {
