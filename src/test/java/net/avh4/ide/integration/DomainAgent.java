@@ -1,31 +1,23 @@
 package net.avh4.ide.integration;
 
-import net.avh4.data.per2.Database;
-import net.avh4.ide.ProjectTemplates;
-import net.avh4.ide.commands.ExecuteProjectCommand;
-import net.avh4.ide.platforms.CodeProject;
+import net.avh4.ide.HdeModel;
+import net.avh4.ide.platforms.CodeClass;
 import net.avh4.ide.platforms.android.AndroidSdk;
 
 import java.io.IOException;
 
 public class DomainAgent implements Agent {
-    private final ProjectTemplates projectTemplates;
-    private final ExecuteProjectCommand executeProjectCommand;
     private final TestAndroidSdk androidSdk;
-    private final Database db;
-    private CodeProject project;
+    private final HdeModel model;
 
-    public DomainAgent(ProjectTemplates projectTemplates, ExecuteProjectCommand executeProjectCommand,
-                       AndroidSdk androidSdk, Database db) {
-        this.projectTemplates = projectTemplates;
-        this.executeProjectCommand = executeProjectCommand;
-        this.db = db;
+    public DomainAgent(AndroidSdk androidSdk, HdeModel model) {
+        this.model = model;
         this.androidSdk = (TestAndroidSdk) androidSdk;
     }
 
     @Override
     public void createNewProject(String projectName) {
-        project = projectTemplates.createAndroidHelloWorldProject(db);
+        model.createNewProject(projectName);
     }
 
     @Override
@@ -36,12 +28,12 @@ public class DomainAgent implements Agent {
 
     @Override
     public String sourceFileContents(String sourceFileName) {
-        return project.modules()[0].classes()[0].source();
+        return model.project().modules()[0].classes()[0].source();
     }
 
     @Override
     public void executeProject() {
-        executeProjectCommand.execute(project);
+        model.executeProject();
     }
 
     @Override
@@ -56,7 +48,9 @@ public class DomainAgent implements Agent {
 
     @Override
     public void replaceEditorText(String sourceFileName, String searchString, String replacement) {
-//        project.modules().head().classes()[0];
-        throw new RuntimeException("Not implemented");  // TODO
+        final CodeClass codeClass = model.project().modules()[0].classes()[0];
+        final String source = codeClass.source();
+        final String newSource = source.replace(searchString, replacement);
+        model.replaceClassSource(sourceFileName, newSource);
     }
 }

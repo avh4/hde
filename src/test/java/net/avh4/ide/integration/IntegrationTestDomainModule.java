@@ -5,8 +5,9 @@ import net.avh4.ide.platforms.android.AndroidSdk;
 import org.picocontainer.MutablePicoContainer;
 
 public class IntegrationTestDomainModule extends IntegrationTestModule {
-    public IntegrationTestDomainModule() {
-        super(DomainAgent.class);
+    @Override
+    protected Class<? extends Agent> getAgentClass() {
+        return DomainAgent.class;
     }
 
     @Override

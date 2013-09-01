@@ -26,5 +26,6 @@ public abstract class GlobalModule {
         pico.addComponent(AndroidSdk.class);
         pico.addComponent(DatabaseImpl.class);
         pico.addComponent(MemoryDatumStore.class);
+        pico.addComponent(HdeModel.class);
     }
 }

@@ -6,6 +6,11 @@ import org.picocontainer.MutablePicoContainer;
 
 public class IntegrationTestUiModule extends IntegrationTestDomainModule {
     @Override
+    protected Class<? extends Agent> getAgentClass() {
+        return UiAgent.class;
+    }
+
+    @Override
     protected void configure(MutablePicoContainer pico) {
         super.configure(pico);
 

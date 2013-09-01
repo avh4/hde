@@ -7,11 +7,13 @@ import org.picocontainer.PicoContainer;
 public abstract class IntegrationTestModule {
     private final MutablePicoContainer pico;
 
-    IntegrationTestModule(Class<? extends Agent> agentClass) {
+    IntegrationTestModule() {
         this.pico = new DefaultPicoContainer();
-        pico.addComponent(agentClass);
+        pico.addComponent(getAgentClass());
         configure(pico);
     }
+
+    protected abstract Class<? extends Agent> getAgentClass();
 
     public final PicoContainer getContainer() {
         return pico;
