@@ -3,6 +3,7 @@ package net.avh4.ide.integration;
 import com.google.common.collect.ImmutableList;
 import org.apache.commons.io.IOUtils;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -70,7 +71,7 @@ public class AndroidProjectsIntegrationTest {
         agent.assertApkWasExecuted("Hello Moon");
     }
 
-    @Test
+    @Test @Ignore
     public void testOpenAndroidProject() throws Exception {
         agent.openProject("./examples/Tasks");
 

@@ -38,16 +38,16 @@ public class AntAndroidPlatform implements PlatformBuilder, PlatformExecutor {
                 "          package=\"com.example.Hello_World\"\n" +
                 "          android:versionCode=\"1\"\n" +
                 "          android:versionName=\"1.0\">\n" +
-                "    <uses-sdk android:minSdkVersion=\"10\"/>\n" +
-                "    <application android:label=\"Hello World\">\n" +
-                "        <activity android:name=\"HelloWorldActivity\"\n" +
-                "                  android:label=\"Hello World\">\n" +
-                "            <intent-filter>\n" +
-                "                <action android:name=\"android.intent.action.MAIN\"/>\n" +
-                "                <category android:name=\"android.intent.category.LAUNCHER\"/>\n" +
-                "            </intent-filter>\n" +
-                "        </activity>\n" +
-                "    </application>\n" +
+                "  <uses-sdk android:minSdkVersion=\"10\"/>\n" +
+                "  <application android:label=\"Hello World\">\n" +
+                "    <activity android:name=\"HelloWorldActivity\"\n" +
+                "              android:label=\"Hello World\">\n" +
+                "      <intent-filter>\n" +
+                "        <action android:name=\"android.intent.action.MAIN\"/>\n" +
+                "        <category android:name=\"android.intent.category.LAUNCHER\"/>\n" +
+                "      </intent-filter>\n" +
+                "    </activity>\n" +
+                "  </application>\n" +
                 "</manifest> \n");
     }
 

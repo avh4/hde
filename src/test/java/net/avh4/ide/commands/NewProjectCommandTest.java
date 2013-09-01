@@ -27,6 +27,7 @@ public class NewProjectCommandTest {
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         stub(projectWindowFactory.getDefaultWindow(newProject)).toReturn(projectWindow);
+        stub(model.project()).toReturn(newProject);
         subject = new NewProjectCommand(windowManager, projectWindowFactory, model);
         subject.execute();
     }
