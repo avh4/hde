@@ -13,7 +13,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.googlecode.dex2jar:dex-reader:1.15" level="project" />
-    <orderEntry type="library" name="Maven: net.avh4.data.per:per:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: net.avh4.data.per:per:0.0.2-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:14.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20090211" level="project" />
     <orderEntry type="library" name="Maven: org.functionaljava:functionaljava:3.1" level="project" />

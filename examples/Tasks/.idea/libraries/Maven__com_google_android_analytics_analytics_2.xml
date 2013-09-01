@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.android.analytics:analytics:2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/libGoogleAnalyticsV2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/android/analytics/analytics/2/analytics-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/android/analytics/analytics/2/analytics-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

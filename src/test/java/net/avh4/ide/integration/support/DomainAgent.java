@@ -39,7 +39,7 @@ public class DomainAgent implements Agent {
 
     @Override
     public void openProject(String path) {
-        throw new RuntimeException("Not implemented");  // TODO
+        model.openProject(path);
     }
 
     @Override

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tasks</string>
+    <string name="title_task_detail">Task Detail</string>
+    <string name="quick_add_entry_placeholder">New task</string>
+    <string name="quick_add_button_text">Add</string>
+    <string name="facebook_app_id">138704233005167</string>
+
+</resources>

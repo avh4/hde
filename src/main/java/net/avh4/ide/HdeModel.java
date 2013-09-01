@@ -10,13 +10,15 @@ public class HdeModel {
     private final Database db;
     private final ProjectTemplates projectTemplates;
     private final ProjectCommand executeProjectCommand;
+    private final ProjectReader projectReader;
     private CodeProject project;
 
     public HdeModel(Database db, ProjectTemplates projectTemplates,
-                    ProjectCommand executeProjectCommand) {
+                    ProjectCommand executeProjectCommand, ProjectReader projectReader) {
         this.db = db;
         this.projectTemplates = projectTemplates;
         this.executeProjectCommand = executeProjectCommand;
+        this.projectReader = projectReader;
     }
 
     public void createNewProject(String projectName) {
@@ -39,5 +41,9 @@ public class HdeModel {
                 return t.set(codeClass._id(), "source", newSource);
             }
         });
+    }
+
+    public void openProject(String path) {
+        project = projectReader.read(path);
     }
 }
