@@ -60,7 +60,7 @@
     <dependency>
       <groupId>net.avh4.data.per</groupId>
       <artifactId>per</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>fi.jumi</groupId>
