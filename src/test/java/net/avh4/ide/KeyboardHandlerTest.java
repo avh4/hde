@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.mockito.Mockito.stub;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
@@ -16,11 +17,12 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 public class KeyboardHandlerTest {
     private KeyboardHandler subject;
     @Mock private ExecuteProjectCommand executeCommand;
+    @Mock private HdeModel model;
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        subject = new KeyboardHandler(executeCommand);
+        subject = new KeyboardHandler(executeCommand, model);
     }
 
     public class WithAProject {
@@ -30,7 +32,7 @@ public class KeyboardHandlerTest {
         @Before
         public void setUp() throws Exception {
             MockitoAnnotations.initMocks(this);
-            subject.setProject(project);
+            stub(model.project()).toReturn(project);
         }
 
         @Test

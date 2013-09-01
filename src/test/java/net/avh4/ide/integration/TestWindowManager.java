@@ -9,8 +9,9 @@ public class TestWindowManager implements WindowManager {
     private Window visibleWindow;
 
     @Override
-    public void showWindow(Window<?> window) {
+    public <A> void showWindow(Window<A> window) {
         checkNotNull(window);
+        window.view().setActions(window.actions());
         this.visibleWindow = window;
     }
 
@@ -27,14 +28,13 @@ public class TestWindowManager implements WindowManager {
         return visibleWindow;
     }
 
-    public <A, T extends Window<A>> A find(Class<T> windowClass) {
+    public <T extends Window> T find(Class<T> windowClass) {
         if (visibleWindow == null) {
             throw new RuntimeException("No visible windows");
         }
         if (windowClass.isAssignableFrom(visibleWindow.getClass())) {
             //noinspection unchecked
-            T window = (T) visibleWindow;
-            return window.view().actions();
+            return (T) visibleWindow;
         } else {
             throw new RuntimeException("Cannot find a " + windowClass.getSimpleName() + " in the set of visible windows:\n" +
                     "    " + visibleWindow.getClass().getCanonicalName());

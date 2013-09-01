@@ -7,9 +7,10 @@ import net.avh4.ide.platforms.CodeProject;
 
 public class KeyboardHandler implements KeyboardInputSourceListener {
     private final HashMap<String, ProjectCommand> keymap;
-    private CodeProject project;
+    private HdeModel model;
 
-    public KeyboardHandler(ExecuteProjectCommand executeCommand) {
+    public KeyboardHandler(ExecuteProjectCommand executeCommand, HdeModel model) {
+        this.model = model;
         keymap = HashMap.hashMap();
         keymap.set("⇧⌘⑩", executeCommand);
     }
@@ -17,10 +18,6 @@ public class KeyboardHandler implements KeyboardInputSourceListener {
     @Override
     public void sendKeyStroke(String s) {
         final Option<ProjectCommand> command = keymap.get(s);
-        if (command.isSome()) command.toNull().execute(project);
-    }
-
-    public void setProject(CodeProject project) {
-        this.project = project;
+        if (command.isSome()) command.toNull().execute(model.project());
     }
 }

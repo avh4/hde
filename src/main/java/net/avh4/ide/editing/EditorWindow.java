@@ -2,27 +2,28 @@ package net.avh4.ide.editing;
 
 import com.google.common.collect.ImmutableSet;
 import net.avh4.ide.Function;
+import net.avh4.ide.HdeModel;
 import net.avh4.ide.Window;
 import net.avh4.ide.WindowView;
 import net.avh4.ide.platforms.CodeClass;
 
-import java.io.IOException;
-
 import static com.google.common.base.Preconditions.checkNotNull;
 
-public class EditorWindow implements Window<Void> {
+public class EditorWindow implements Window<EditorWindow.Actions> {
     private final CodeClass codeClass;
     private final EditorWindowView view;
+    private HdeModel model;
 
-    public EditorWindow(CodeClass codeClass, EditorWindowView view) {
+    public interface Actions {
+        void changeSourceText(String newSource);
+    }
+
+    public EditorWindow(CodeClass codeClass, EditorWindowView view, HdeModel model) {
+        this.model = model;
         this.codeClass = checkNotNull(codeClass);
         this.view = checkNotNull(view);
 
-        try {
-            view.setContent(codeClass.name(), codeClass.source());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        view.setContent(codeClass.name(), codeClass.source());
     }
 
     @Override
@@ -31,8 +32,18 @@ public class EditorWindow implements Window<Void> {
     }
 
     @Override
-    public WindowView<Void> view() {
+    public WindowView<Actions> view() {
         return view;
+    }
+
+    @Override
+    public Actions actions() {
+        return new Actions() {
+            @Override
+            public void changeSourceText(String newSource) {
+                model.replaceClassSource(codeClass.name(), newSource);
+            }
+        };
     }
 
     public String getContents() {

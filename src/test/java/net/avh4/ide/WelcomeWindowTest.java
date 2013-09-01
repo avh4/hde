@@ -28,15 +28,8 @@ public class WelcomeWindowTest {
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
-        doAnswer(new Answer() {
-            @Override
-            public Object answer(InvocationOnMock invocation) throws Throwable {
-                actions = (WelcomeWindow.Actions) invocation.getArguments()[0];
-                return null;
-            }
-        }).when(view).setActions(Mockito.any(WelcomeWindow.Actions.class));
-
         subject = new WelcomeWindow(windowManager, newProjectCommand, view);
+        actions = subject.actions();
     }
 
     @Test

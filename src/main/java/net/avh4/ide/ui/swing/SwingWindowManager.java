@@ -9,8 +9,9 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 public class SwingWindowManager implements WindowManager {
     @Override
-    public void showWindow(Window<?> window) {
+    public <A> void showWindow(Window<A> window) {
         Object view = window.view();
+        window.view().setActions(window.actions());
         checkNotNull(view);
         if (view instanceof JFrame) {
             JFrame jframe = (JFrame) view;

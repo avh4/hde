@@ -6,4 +6,6 @@ public interface Window<A> {
     ImmutableSet<Function> functions();
 
     WindowView<A> view();
+
+    A actions();
 }

@@ -41,9 +41,4 @@ public class SwingWelcomeWindowView extends JFrame implements WelcomeWindowView 
     public void setActions(WelcomeWindow.Actions actions) {
         this.actions = actions;
     }
-
-    @Override
-    public WelcomeWindow.Actions actions() {
-        throw new RuntimeException("Not implemented");  // TODO
-    }
 }

@@ -1,6 +1,5 @@
 package net.avh4.ide;
 
-import org.picocontainer.Characteristics;
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
 import org.picocontainer.PicoContainer;
@@ -14,9 +13,9 @@ public class ApplicationProvider {
 
     public Application get() {
         MutablePicoContainer p = new DefaultPicoContainer(pico);
+        p.addComponent(PicoContainer.class, p);
         ApplicationModule.configureContainer(p);
-        scopeComponent(p, KeyboardHandler.class);
-        p.as(Characteristics.CACHE).addComponent(Application.class);
+        scopeComponent(p, KeyboardHandler.class); // TODO Move it form GlobalModule to ApplicationModule (and add CACHED)
         return p.getComponent(Application.class);
     }
 

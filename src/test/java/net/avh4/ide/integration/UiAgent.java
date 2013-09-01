@@ -8,6 +8,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
 
+import static net.avh4.ide.integration.TestWindowViewAdapter.TestWindowView;
 import static org.fest.assertions.Assertions.assertThat;
 
 public class UiAgent implements Agent {
@@ -35,7 +36,7 @@ public class UiAgent implements Agent {
 
     @Override
     public void createNewProject(String projectName) {
-        windowManager.find(WelcomeWindow.class).tapNewAndroidProject();
+        windowManager.find(WelcomeWindow.class).actions().tapNewAndroidProject();
     }
 
     @Override
@@ -61,8 +62,8 @@ public class UiAgent implements Agent {
 
     @Override
     public void openProject(String path) {
-        windowManager.find(WelcomeWindow.class).tapOpenProject();
-        windowManager.find(ProjectPicker.class).choose(path);
+        windowManager.find(WelcomeWindow.class).actions().tapOpenProject();
+        windowManager.find(ProjectPicker.class).actions().choose(path);
     }
 
     @Override
@@ -72,6 +73,13 @@ public class UiAgent implements Agent {
 
     @Override
     public void replaceEditorText(String sourceFileName, String searchString, String replacement) {
-        throw new RuntimeException("Not implemented");  // TODO
+        // TODO make sure we're looking at the right file
+        final EditorWindow window = windowManager.find(EditorWindow.class);
+        TestWindowView v = (TestWindowView) window.view();
+        final String source = (String) v._get("setContent", 1);
+
+        final String newSource = source.replace(searchString, replacement);
+
+        window.actions().changeSourceText(newSource);
     }
 }
