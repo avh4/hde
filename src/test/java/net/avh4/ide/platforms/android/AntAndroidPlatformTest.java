@@ -1,8 +1,13 @@
 package net.avh4.ide.platforms.android;
 
+import net.avh4.data.per2.Database;
+import net.avh4.data.per2.DatabaseImpl;
+import net.avh4.data.per2.MemoryDatumStore;
+import net.avh4.ide.ProjectTemplates;
 import net.avh4.ide.platforms.BuildResults;
 import net.avh4.ide.platforms.CodeModule;
 import net.avh4.ide.platforms.util.FileSystem;
+import org.fest.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InOrder;
@@ -21,18 +26,12 @@ public class AntAndroidPlatformTest {
 
     private AntAndroidPlatform subject;
     private CodeModule codeModule;
-    @Mock
-    private FileSystem fileSystem;
-    @Mock
-    private AndroidSdk androidSdk;
-    @Mock
-    private BuildResults buildResults;
-    @Mock
-    private File apkFile;
-    @Mock
-    private File buildResultsRoot;
-    @Mock
-    private File tmpRoot;
+    @Mock private FileSystem fileSystem;
+    @Mock private AndroidSdk androidSdk;
+    @Mock private BuildResults buildResults;
+    @Mock private File apkFile;
+    @Mock private File buildResultsRoot;
+    @Mock private File tmpRoot;
     private String buildResultsPath = "/my/home/project/target/2013-08-11-1311";
     private String apkPath = buildResultsPath + "/build.apk";
 
@@ -46,7 +45,8 @@ public class AntAndroidPlatformTest {
         stub(buildResults.root()).toReturn(buildResultsRoot);
         stub(buildResults.artifactPath("apk")).toReturn(apkPath);
 
-        codeModule = new CodeModule().addClass("com.example.Hello_World", "HelloWorldActivity", null);
+        Database db = new DatabaseImpl(new MemoryDatumStore());
+        codeModule =new ProjectTemplates().createAndroidHelloWorldProject(db).modules()[0];
 
         subject = new AntAndroidPlatform(fileSystem, androidSdk);
     }

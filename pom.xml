@@ -54,9 +54,15 @@
       <groupId>com.googlecode.dex2jar</groupId>
       <artifactId>dex-reader</artifactId>
       <version>1.15</version>
-      <scope>test</scope>
+      <scope>system</scope>
       <systemPath>${project.basedir}/lib/dex-reader-1.15.jar</systemPath>
     </dependency>
+    <dependency>
+      <groupId>net.avh4.data.per</groupId>
+      <artifactId>per</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit-dep</artifactId>

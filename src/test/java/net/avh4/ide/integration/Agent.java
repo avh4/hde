@@ -16,5 +16,5 @@ public interface Agent {
 
     void assertApkWasExecuted(String expectedHelloWorldText) throws IOException;
 
-    void replaceEditorText(String searchString, String replacement);
+    void replaceEditorText(String sourceFileName, String searchString, String replacement);
 }

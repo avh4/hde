@@ -1,5 +1,6 @@
 package net.avh4.ide.integration;
 
+import net.avh4.data.per2.Database;
 import net.avh4.ide.ProjectTemplates;
 import net.avh4.ide.commands.ExecuteProjectCommand;
 import net.avh4.ide.platforms.CodeProject;
@@ -11,17 +12,20 @@ public class DomainAgent implements Agent {
     private final ProjectTemplates projectTemplates;
     private final ExecuteProjectCommand executeProjectCommand;
     private final TestAndroidSdk androidSdk;
+    private final Database db;
     private CodeProject project;
 
-    public DomainAgent(ProjectTemplates projectTemplates, ExecuteProjectCommand executeProjectCommand, AndroidSdk androidSdk) {
+    public DomainAgent(ProjectTemplates projectTemplates, ExecuteProjectCommand executeProjectCommand,
+                       AndroidSdk androidSdk, Database db) {
         this.projectTemplates = projectTemplates;
         this.executeProjectCommand = executeProjectCommand;
+        this.db = db;
         this.androidSdk = (TestAndroidSdk) androidSdk;
     }
 
     @Override
     public void createNewProject(String projectName) {
-        project = projectTemplates.createAndroidHelloWorldProject();
+        project = projectTemplates.createAndroidHelloWorldProject(db);
     }
 
     @Override
@@ -32,7 +36,7 @@ public class DomainAgent implements Agent {
 
     @Override
     public String sourceFileContents(String sourceFileName) {
-        return project.modules().head().classes().head().getSource();
+        return project.modules()[0].classes()[0].source();
     }
 
     @Override
@@ -51,7 +55,8 @@ public class DomainAgent implements Agent {
     }
 
     @Override
-    public void replaceEditorText(String searchString, String replacement) {
+    public void replaceEditorText(String sourceFileName, String searchString, String replacement) {
+//        project.modules().head().classes()[0];
         throw new RuntimeException("Not implemented");  // TODO
     }
 }

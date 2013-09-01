@@ -31,7 +31,7 @@ public class AntAndroidPlatform implements PlatformBuilder, PlatformExecutor {
     private void createFiles(CodeModule codeModule) {
         for (CodeClass codeClass : codeModule.classes()) {
             final String filename = sourceFileName("src", codeClass.packageName(), codeClass.name());
-            fileSystem.addFile(filename, codeClass.getSource());
+            fileSystem.addFile(filename, codeClass.source());
         }
         fileSystem.addFile("AndroidManifest.xml", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +

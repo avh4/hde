@@ -1,5 +1,7 @@
 package net.avh4.ide;
 
+import net.avh4.data.per2.DatabaseImpl;
+import net.avh4.data.per2.MemoryDatumStore;
 import net.avh4.ide.commands.ExecuteProjectCommand;
 import net.avh4.ide.editing.EditorWindow;
 import net.avh4.ide.editing.EditorWindowProvider;
@@ -22,5 +24,7 @@ public abstract class GlobalModule {
         pico.addComponent(AntAndroidPlatform.class);
         pico.addComponent(FileSystem.class);
         pico.addComponent(AndroidSdk.class);
+        pico.addComponent(DatabaseImpl.class);
+        pico.addComponent(MemoryDatumStore.class);
     }
 }

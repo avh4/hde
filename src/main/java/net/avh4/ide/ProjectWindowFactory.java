@@ -13,8 +13,8 @@ public class ProjectWindowFactory {
     }
 
     public Window getDefaultWindow(CodeProject newProject) {
-        final CodeModule module = newProject.modules().head();
-        final CodeClass codeClass = module.classes().head();
+        final CodeModule module = newProject.modules()[0];
+        final CodeClass codeClass = module.classes()[0];
         return provider.get(codeClass);
     }
 }

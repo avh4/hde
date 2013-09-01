@@ -71,7 +71,7 @@ public class UiAgent implements Agent {
     }
 
     @Override
-    public void replaceEditorText(String searchString, String replacement) {
+    public void replaceEditorText(String sourceFileName, String searchString, String replacement) {
         throw new RuntimeException("Not implemented");  // TODO
     }
 }

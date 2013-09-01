@@ -1,12 +1,12 @@
 package net.avh4.ide;
 
-import fj.data.List;
 import net.avh4.ide.editing.EditorWindow;
 import net.avh4.ide.editing.EditorWindowProvider;
 import net.avh4.ide.platforms.CodeClass;
 import net.avh4.ide.platforms.CodeModule;
 import net.avh4.ide.platforms.CodeProject;
 import net.avh4.test.junit.Nested;
+import org.fest.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,8 +29,8 @@ public class ProjectWindowFactoryTest {
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         stub(provider.get(codeClass)).toReturn(editorWindow);
-        stub(project.modules()).toReturn(List.list(module));
-        stub(module.classes()).toReturn(List.list(codeClass));
+        stub(project.modules()).toReturn(Arrays.array(module));
+        stub(module.classes()).toReturn(Arrays.array(codeClass));
         subject = new ProjectWindowFactory(provider);
     }
 

@@ -1,8 +1,8 @@
 package net.avh4.ide.commands;
 
-import fj.data.List;
 import net.avh4.ide.BuildResultsProvider;
 import net.avh4.ide.platforms.*;
+import org.fest.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -25,7 +25,7 @@ public class ExecuteProjectCommandTest {
         MockitoAnnotations.initMocks(this);
 
         stub(provider.get()).toReturn(results).toThrow(new RuntimeException("Only one BuildResults should be used"));
-        stub(project.modules()).toReturn(List.list(module));
+        stub(project.modules()).toReturn(Arrays.array(module));
 
         subject = new ExecuteProjectCommand(builder, provider, executor);
         subject.execute(project);

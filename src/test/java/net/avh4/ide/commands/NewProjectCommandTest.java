@@ -1,5 +1,6 @@
 package net.avh4.ide.commands;
 
+import net.avh4.data.per2.Database;
 import net.avh4.ide.KeyboardHandler;
 import net.avh4.ide.ProjectTemplates;
 import net.avh4.ide.ProjectWindowFactory;
@@ -16,30 +17,26 @@ import static org.mockito.Mockito.verify;
 
 public class NewProjectCommandTest {
     private NewProjectCommand subject;
-    @Mock
-    private ProjectTemplates projectTemplates;
-    @Mock
-    private CodeProject newProject;
-    @Mock
-    private WindowManager windowManager;
-    @Mock
-    private Window projectWindow;
-    @Mock
-    private ProjectWindowFactory projectWindowFactory;
+    @Mock private ProjectTemplates projectTemplates;
+    @Mock private CodeProject newProject;
+    @Mock private WindowManager windowManager;
+    @Mock private Window projectWindow;
+    @Mock private ProjectWindowFactory projectWindowFactory;
     @Mock private KeyboardHandler keyboardHandler;
+    @Mock private Database db;
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        stub(projectTemplates.createAndroidHelloWorldProject()).toReturn(newProject);
+        stub(projectTemplates.createAndroidHelloWorldProject(db)).toReturn(newProject);
         stub(projectWindowFactory.getDefaultWindow(newProject)).toReturn(projectWindow);
-        subject = new NewProjectCommand(projectTemplates, windowManager, projectWindowFactory, keyboardHandler);
+        subject = new NewProjectCommand(projectTemplates, windowManager, projectWindowFactory, keyboardHandler, db);
         subject.execute();
     }
 
     @Test
     public void shouldMakeANewProject() throws Exception {
-        verify(projectTemplates).createAndroidHelloWorldProject();
+        verify(projectTemplates).createAndroidHelloWorldProject(db);
     }
 
     @Test

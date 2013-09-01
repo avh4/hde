@@ -58,7 +58,7 @@ public class AndroidProjectsIntegrationTest {
         agent.createNewProject("Hello World");
 
         assertThat(agent.isEditorVisible()).isTrue();
-        agent.replaceEditorText("Hello World", "Hello Moon");
+        agent.replaceEditorText("HelloWorldActivity", "Hello World", "Hello Moon");
         assertThat(agent.sourceFileContents("HelloWorldActivity")).isEqualTo(
                 exampleContents("src/com/example/Hello_World/HelloWorldActivity.java")
                         .replace("\"Hello World\"", "\"Hello Moon\"")

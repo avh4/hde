@@ -19,7 +19,7 @@ public class EditorWindow implements Window<Void> {
         this.view = checkNotNull(view);
 
         try {
-            view.setContent(codeClass.name(), codeClass.getSource());
+            view.setContent(codeClass.name(), codeClass.source());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -36,6 +36,6 @@ public class EditorWindow implements Window<Void> {
     }
 
     public String getContents() {
-        return codeClass.getSource();
+        return codeClass.source();
     }
 }
